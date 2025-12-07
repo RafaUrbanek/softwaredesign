@@ -1,0 +1,17 @@
+Operação: cadastrarProjeto(cliente, dataInicio, prazo, descricao, contrato)
+
+Referências Cruzadas: Caso de Uso - ECU 001 - Cadastrar Projeto
+
+Pré-condições:
+O Ator deve estar identificado e autenticado no sistema.
+Os dados obrigatórios (cliente, início, prazo, descrição) devem ter sido validados e estar corretos.
+
+Pós-condições:
+Uma nova instância p da classe Projeto foi criada.
+A instância p da classe projeto foi associada a um idProjeto.
+O atributo p.cliente foi definido com base no parâmetro cliente.
+O atributo p.dataInicio foi definido com base no parâmetro dataInicio.
+O atributo p.prazo foi definido com base no parâmetro prazo.
+O atributo p.descricao foi definido com base no parâmetro descricao.
+Se o parâmetro contrato não for nulo (conforme Fluxo B), o atributo p.contrato foi associado ao arquivo importado.
+A instância p foi associada ao registro geral de projetos do sistema (persistência).

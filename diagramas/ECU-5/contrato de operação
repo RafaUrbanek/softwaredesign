@@ -1,0 +1,14 @@
+Operação: cadastrarNotaFiscal(idProjeto, dadosNota)
+
+Referências Cruzadas: Caso de Uso - ECU 005 - Cadastrar notas fiscais e recibos
+
+Pré-condições:
+Um usuário com cargo (adm-fin) está autenticado no sistema.
+Existe uma instância p da classe Projeto identificada por idProjeto no sistema.
+
+Pós-condições:
+
+Foi criada uma nova instância n da classe ItemFiscal.
+Os atributos da instância n foram inicializados com os valores fornecidos em dadosNota (ex: número, valor, data, descrição).
+A instância n foi associada à instância p (Projeto).
+

@@ -1,0 +1,12 @@
+Operação: cadastrarAtividade(nome, duracao, local, objetivo, resumo, listaParticipantes)
+
+Referências Cruzadas: Caso de Uso - ECU 004 - Cadastrar atividade
+
+Pré-condições:
+Um usuário (Ator) está autenticado no sistema.
+Para cada idParticipante presente na listaParticipantes, existe uma instância correspondente m da classe Participante cadastrada no sistema 
+
+Pós-condições:
+Foi criada uma nova instância a da classe Atividade.
+Os atributos da instância a (nome, duração, local, objetivo, resumo) foram inicializados com os valores passados nos parâmetros correspondentes.
+A instância a foi associada com cada instância m de Participante identificada na listaParticipantes.
