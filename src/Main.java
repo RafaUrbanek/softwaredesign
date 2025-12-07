@@ -89,7 +89,7 @@ public class Main {
                     System.out.print("Status: ");
                     String statusProjeto = input.nextLine();
 
-                    ecomp.cadastrarEtapaProjeto(idProjeto, cronograma, statusProjeto);
+                    ecomp.cadastrarEtapas(idProjeto, cronograma, statusProjeto);
                     System.out.println("\nEtapa cadastrada com sucesso!");
                     break;
                 }
@@ -195,8 +195,8 @@ public class Main {
                         System.out.print("Digite o Id do projeto desejado: ");
                         int idProjeto = Integer.parseInt(input.nextLine());
 
-                        Projeto proj = ecomp.selecionarProjeto(idProjeto);
-                        if (proj == null) {
+                        Projeto projeto = ecomp.selecionarProjeto(idProjeto);
+                        if (projeto == null) {
                             System.out.println("Projeto não encontrado!.");
                             break;
                         }
@@ -210,7 +210,7 @@ public class Main {
                         System.out.print("Tipo: ");
                         String tipo = input.nextLine();
 
-                        ecomp.cadastrarItemFiscal(data, valor, tipo, proj);
+                        ecomp.cadastrarItemFiscal(data, valor, tipo, projeto);
                         System.out.println("\nItem Fiscal cadastrado com sucesso!");
                         break;
                     }

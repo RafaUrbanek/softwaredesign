@@ -17,9 +17,8 @@ public class ItemFiscal {
     public void setValor(float novoValor) { this.valor = novoValor; }
     public void setTipo(String novoTipo) { this.tipo = novoTipo; }
 
-    public ItemFiscal cadastrarItemFiscal(String data, float valor, String tipo, Projeto p) {
+    public ItemFiscal cadastrarItemFiscal(String data, float valor, String tipo, Projeto projeto) {
         return new ItemFiscal(data, valor, tipo);
-        // Implementação real deve adicionar o item fiscal ao projeto p
     }
 
     @Override

@@ -31,9 +31,9 @@ public class Ecomp {
         this.projetos.add(p);
     }
 
-    public Projeto selecionarProjeto(int id) {
+    public Projeto selecionarProjeto(int idProjeto) {
         for (Projeto p : projetos) {
-            if (p.getId() == id) {
+            if (p.getId() == idProjeto) {
                 return p;
             }
         }
@@ -42,8 +42,8 @@ public class Ecomp {
 
     // -------------------- MÉTODOS DE DESENVOLVEDORES --------------------
 
-    public boolean cadastrarDesenvolvedor(Projeto p, int id) {
-        Desenvolvedor dev = selecionarDesenvolvedor(id);
+    public boolean cadastrarDesenvolvedor(Projeto p, int idDesenvolvedor) {
+        Desenvolvedor dev = selecionarDesenvolvedor(idDesenvolvedor);
 
         if (dev == null)
             return false;
@@ -55,9 +55,9 @@ public class Ecomp {
         this.devs.add(dev);
     }
 
-    public Desenvolvedor selecionarDesenvolvedor(int id) {
+    public Desenvolvedor selecionarDesenvolvedor(int idDesenvolvedor) {
         for (Desenvolvedor dev : devs) {
-            if (dev.getId() == id)
+            if (dev.getId() == idDesenvolvedor)
                 return dev;
         }
         return null;
@@ -87,18 +87,18 @@ public class Ecomp {
 
     // -------------------- ITENS FISCAIS --------------------
 
-    public void cadastrarItemFiscal(String data, float valor, String tipo, Projeto p) {
+    public void cadastrarItemFiscal(String data, float valor, String tipo, Projeto projeto) {
         ItemFiscal item = new ItemFiscal(data, valor, tipo);
-        p.adicionarItemFiscal(item);
+        projeto.adicionarItemFiscal(item);
     }
 
     // -------------------- ETAPAS --------------------
 
-    public Etapa cadastrarEtapaProjeto(int id, String cronograma, String status) {
-        Projeto p = selecionarProjeto(id);
+    public Etapa cadastrarEtapas(int idProjeto, String cronograma, String status) {
+        Projeto p = selecionarProjeto(idProjeto);
         if (p == null) return null;
 
-        return p.cadastrarEtapaProjeto(cronograma, status);
+        return p.cadastrarEtapas(cronograma, status);
     }
 
     // -------------------- ATIVIDADES --------------------
@@ -111,8 +111,8 @@ public class Ecomp {
         this.atividades.add(a);
     }
 
-    public boolean adicionarParticipanteAtividade(Atividade a, int id) {
-        Ecomper e = selecionarEcomper(id);
+    public boolean adicionarParticipanteAtividade(Atividade a, int idEcomper) {
+        Ecomper e = selecionarEcomper(idEcomper);
 
         if (e == null)
             return false;
@@ -123,9 +123,9 @@ public class Ecomp {
         return true;
     }
 
-    public Ecomper selecionarEcomper(int id) {
+    public Ecomper selecionarEcomper(int idEcomper) {
         for (Ecomper e : membros) {
-            if (e.getId() == id)
+            if (e.getId() == idEcomper)
                 return e;
         }
         return null;

@@ -28,12 +28,6 @@ public class Projeto {
         this.etapasProjeto = new ArrayList<>();
     }
 
-    public Projeto() {
-        this.devs = new ArrayList<>();
-        this.itensFiscais = new ArrayList<>();
-        this.etapasProjeto = new ArrayList<>();
-    }
-
     public int getId() { return id; }
     public List<ItemFiscal> getItensFiscais() { return itensFiscais; }
 
@@ -64,7 +58,7 @@ public class Projeto {
         itensFiscais.add(item);
     }
 
-    public Etapa cadastrarEtapaProjeto(String cronograma, String statusProjeto) {
+    public Etapa cadastrarEtapas(String cronograma, String statusProjeto) {
         Etapa etapa = new Etapa(cronograma, statusProjeto);
         adicionarEtapa(etapa);
         return etapa;

@@ -8,8 +8,6 @@ public class Cliente {
     private String telefone;
     private String contato;
 
-    public Cliente() {}
-
     public Cliente(String nome, String cpfCnpj, String email, String telefone, String contato) {
         this.id = idCounter++;
         this.nome = nome;
