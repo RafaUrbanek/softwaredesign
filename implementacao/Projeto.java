@@ -68,7 +68,7 @@ public class Projeto {
         etapasProjeto.add(etapa);
     }
 
-  @Override
+    @Override
     public String toString() {
         return "Id: " + id + "\n" 
             + "Data Inicio: " + dataInicio + "\n" 

@@ -30,10 +30,6 @@ public class Atividade {
     public void setObjetivo (String objetivo) { this.objetivo = objetivo; }
     public void setResumo (String resumo) { this.resumo = resumo; }
 
-    public Atividade cadastrarAtividade(String nome, String duracao, String local, String objetivo, String resumo) {
-        return new Atividade(nome, duracao, local, objetivo, resumo);
-    }
-
     public void adicionarParticipante(Participante p) {
         this.participantes.add(p);
     }

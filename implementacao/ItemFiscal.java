@@ -17,10 +17,6 @@ public class ItemFiscal {
     public void setValor(float novoValor) { this.valor = novoValor; }
     public void setTipo(String novoTipo) { this.tipo = novoTipo; }
 
-    public ItemFiscal cadastrarItemFiscal(String data, float valor, String tipo, Projeto projeto) {
-        return new ItemFiscal(data, valor, tipo);
-    }
-
     @Override
     public String toString() {
         return "Tipo: " + tipo + "\n"
